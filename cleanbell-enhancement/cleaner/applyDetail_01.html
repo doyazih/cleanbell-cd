@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>클린벨</title>
+  <link rel="stylesheet" href="../css-v2/reset.css">
+  <link rel="stylesheet" href="../css-v2/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css-v2/owl.carousel.css">
+  <link rel="stylesheet" href="../css-v2/default.css">
+  <link rel="stylesheet" href="../css-v4/cleaner.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-640.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub-640.css">
+  <link rel="stylesheet" href="../css-v4/circle.css">
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js-v2/cleaner.js"></script>
+</head>
+<body>
+	<div id="wrap">
+    <!-- <div id="loadingCompany">
+      <div class="balls">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <span>업체 조회중 입니다.</span>
+    </div> -->
+		<header id="header">
+      <div class="inner">
+        <h1 id="logo"><a href="http://www.cleanbell.co.kr/"><img src="../images-v2/logo.png" alt="클린벨"></a></h1>
+        <a href="javascript:void(0)" class="showDropmenu"></a>
+        <nav id="nav">
+          <ul id="gnb">
+            <li class="cleanbellDrop">
+              <div class="cleanbell-dropmenu">
+                <ul>
+                  <li><a href="javascript:void(0)">청소업체 검색</a></li>
+                  <li><a href="javascript:void(0)">청소업체 선택 TIP</a></li>
+                  <li><a href="javascript:void(0)">신청내역조회</a></li>
+                  <li><a href="javascript:void(0)">손없는날</a></li>
+                  <li class="dropwidth100"><a href="javascript:void(0)">고객센터</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+		<article id="container" class="subcontainer">
+			<div class="appDetail">
+        <div class="appBtn bgNone">
+					<div class="inner">
+						<a href="#none">돌아가기</a>
+					</div>
+				</div>
+				<div class="appInfo">
+					<div class="inner">
+						<h3>신청정보</h3>
+						<ol>
+							<li><span>나의 견적 신청 수</span><strong class="lato">3<small>개</small></strong></li>
+							<li><span>평균 고객 업체 수</span><strong class="lato">3.1<small>개</small></strong></li>
+						</ol>
+						<ul>
+							<li><span>고객명</span><strong>홍길동</strong></li>
+							<li><span>지역</span><strong>경기도 안양시 동안구</strong></li>
+							<li><span>청소일</span><strong class="lato">2019-06-02</strong></li>
+							<li><span>평수</span><strong class="lato">59<small>평</small></strong></li>
+						</ul>
+					</div>
+				</div>
+        <div class="appBtn">
+					<div class="inner">
+						<input type="submit" id="moreCompare"><label for="moreCompare"><span></span>더 비교할래요!</label>
+					</div>
+				</div>
+				<div class="appList">
+					<div class="inner">
+						<ol class="checkTotal pc">
+							<li><input type="checkbox" checked id="estAll"><label for="estAll"><span></span> 견적신청</label></li>
+							<li><input type="checkbox" id="consultAll"><label for="consultAll"><span></span> 상담신청</label></li>
+						</ol>
+						<div class="addBox">
+							<dl>
+                <dt>
+                  <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                  <div class="review mobile">
+                    <span class="star lato">80</span>
+                    <small>후기 <span class="lato">500+</span></small>
+                  </div>
+                </dt>
+								<dd>
+                  <ol>
+										<li class="grade-1">신규</li>
+										<li class="grade-2">프리미엄</li>
+										<li class="grade-3 lato">HOT</li>
+									</ol>
+									<h3>극한클리닝</h3>
+                  <div class="review pc">
+                    <div class="clearfix">
+                      <div class="c100 p80">
+                        <span>80</span>
+                        <div class="slice">
+                          <div class="bar"></div>
+                          <div class="fill"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rText">
+                      <strong>우수</strong>
+                      <small>후기 <span class="lato">500+</span></small>
+                    </div>
+                  </div><!--.review-->
+									<small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+									<ul>
+										<li>상담건수<strong class="lato">1,000+</strong></li>
+										<li>예상가격<strong class="lato">290,000 ~ 310,000<span class="noto">원</span></strong></li>
+									</ul>
+									<h6>최근 <span>5</span>개의 견적 요청을 받았습니다.</h6>
+								</dd>
+								<dd class="checkArea pc">
+									<ol>
+										<li><input type="checkbox" id="est-01" class="est" checked><label for="est-01"><span></span> 견적신청</label></li>
+										<li><input type="checkbox" id="consult-01" class="consult"><label for="consult-01"><span></span> 상담신청</label></li>
+									</ol>
+								</dd>
+							</dl>
+              <div class="checkArea mobile">
+                <ol>
+                  <li><input type="radio" name="check-app-1" id="est-M-01" class="est" checked><label for="est-M-01"><span></span> 견적요청</label></li>
+                  <li><input type="radio" name="check-app-1" id="consult-M-01" class="consult"><label for="consult-M-01"><span></span> 견적 및 상담요청</label></li>
+                </ol>
+              </div>
+						</div><!--.addBox-->
+						<div class="addBox">
+							<dl>
+                <dt>
+                  <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                  <div class="review mobile">
+                    <span class="star lato">80</span>
+                    <small>후기 <span class="lato">500+</span></small>
+                  </div>
+                </dt>
+								<dd>
+                  <ol>
+										<li class="grade-1">신규</li>
+										<li class="grade-2">프리미엄</li>
+										<li class="grade-3 lato">HOT</li>
+									</ol>
+									<h3>극한클리닝</h3>
+									<div class="review pc">
+										<div class="clearfix">
+											<div class="c100 p80">
+												<span>80</span>
+												<div class="slice">
+													<div class="bar"></div>
+													<div class="fill"></div>
+												</div>
+											</div>
+										</div>
+										<div class="rText">
+											<strong>우수</strong>
+											<small>후기 <span class="lato">500+</span></small>
+										</div>
+									</div><!--.review-->
+									<small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+									<ul>
+										<li>상담건수<strong class="lato">1,000+</strong></li>
+										<li>예상가격<strong class="lato">290,000 ~ 310,000<span class="noto">원</span></strong></li>
+									</ul>
+									<h6>최근 <span>5</span>개의 견적 요청을 받았습니다.</h6>
+								</dd>
+								<dd class="checkArea pc">
+									<ol>
+										<li><input type="checkbox" id="est-02" class="est" checked><label for="est-02"><span></span> 견적신청</label></li>
+										<li><input type="checkbox" id="consult-02" class="consult"><label for="consult-02"><span></span> 상담신청</label></li>
+									</ol>
+								</dd>
+							</dl>
+              <div class="checkArea mobile">
+                <ol>
+                  <li><input type="radio" name="check-app-2" id="est-M-02" class="est" checked><label for="est-M-02"><span></span> 견적요청</label></li>
+                  <li><input type="radio" name="check-app-2" id="consult-M-02" class="consult"><label for="consult-M-02"><span></span> 견적 및 상담요청</label></li>
+                </ol>
+              </div>
+						</div><!--.addBox-->
+						<div class="addBox">
+							<dl>
+                <dt>
+                  <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                  <div class="review mobile">
+                    <span class="star lato">80</span>
+                    <small>후기 <span class="lato">500+</span></small>
+                  </div>
+                </dt>
+								<dd>
+                  <ol>
+										<li class="grade-1">신규</li>
+										<li class="grade-2">프리미엄</li>
+										<li class="grade-3 lato">HOT</li>
+									</ol>
+									<h3>극한클리닝</h3>
+									<div class="review pc">
+										<div class="clearfix">
+											<div class="c100 p80">
+												<span>80</span>
+												<div class="slice">
+													<div class="bar"></div>
+													<div class="fill"></div>
+												</div>
+											</div>
+										</div>
+										<div class="rText">
+											<strong>우수</strong>
+											<small>후기 <span class="lato">500+</span></small>
+										</div>
+									</div><!--.review-->
+									<small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+									<ul>
+										<li>상담건수<strong class="lato">1,000+</strong></li>
+										<li>예상가격<strong class="lato">290,000 ~ 310,000<span class="noto">원</span></strong></li>
+									</ul>
+									<h6>최근 <span>5</span>개의 견적 요청을 받았습니다.</h6>
+								</dd>
+								<dd class="checkArea pc">
+									<ol>
+										<li><input type="checkbox" id="est-03" class="est" checked><label for="est-03"><span></span> 견적신청</label></li>
+										<li><input type="checkbox" id="consult-03" class="consult"><label for="consult-03"><span></span> 상담신청</label></li>
+									</ol>
+								</dd>
+							</dl>
+              <div class="checkArea mobile">
+                <ol>
+                  <li><input type="radio" name="check-app-3" id="est-M-03" class="est" checked><label for="est-M-03"><span></span> 견적요청</label></li>
+                  <li><input type="radio" name="check-app-3" id="consult-M-03" class="consult"><label for="consult-M-03"><span></span> 견적 및 상담요청</label></li>
+                </ol>
+              </div>
+						</div><!--.addBox-->
+						<div class="addBox">
+							<dl>
+                <dt>
+                  <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                  <div class="review mobile">
+                    <span class="star lato">80</span>
+                    <small>후기 <span class="lato">500+</span></small>
+                  </div>
+                </dt>
+								<dd>
+                  <ol>
+										<li class="grade-1">신규</li>
+										<li class="grade-2">프리미엄</li>
+										<li class="grade-3 lato">HOT</li>
+									</ol>
+									<h3>극한클리닝</h3>
+									<div class="review pc">
+										<div class="clearfix">
+											<div class="c100 p80">
+												<span>80</span>
+												<div class="slice">
+													<div class="bar"></div>
+													<div class="fill"></div>
+												</div>
+											</div>
+										</div>
+										<div class="rText">
+											<strong>우수</strong>
+											<small>후기 <span class="lato">500+</span></small>
+										</div>
+									</div><!--.review-->
+									<small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+									<ul>
+										<li>상담건수<strong class="lato">1,000+</strong></li>
+										<li>예상가격<strong class="lato">290,000 ~ 310,000<span class="noto">원</span></strong></li>
+									</ul>
+									<h6>최근 <span>5</span>개의 견적 요청을 받았습니다.</h6>
+								</dd>
+								<dd class="checkArea pc">
+									<ol>
+										<li><input type="checkbox" id="est-04" class="est" checked><label for="est-04"><span></span> 견적신청</label></li>
+										<li><input type="checkbox" id="consult-04" class="consult"><label for="consult-04"><span></span> 상담신청</label></li>
+									</ol>
+								</dd>
+							</dl>
+              <div class="checkArea mobile">
+                <ol>
+                  <li><input type="radio" name="check-app-4" id="est-M-04" class="est" checked><label for="est-M-04"><span></span> 견적요청</label></li>
+                  <li><input type="radio" name="check-app-4" id="consult-M-04" class="consult"><label for="consult-M-04"><span></span> 견적 및 상담요청</label></li>
+                </ol>
+              </div>
+						</div><!--.addBox-->
+						<div class="addBox">
+							<dl>
+                <dt>
+                  <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                  <div class="review mobile">
+                    <span class="star lato">80</span>
+                    <small>후기 <span class="lato">500+</span></small>
+                  </div>
+                </dt>
+								<dd>
+                  <ol>
+										<li class="grade-1">신규</li>
+										<li class="grade-2">프리미엄</li>
+										<li class="grade-3 lato">HOT</li>
+									</ol>
+									<h3>극한클리닝</h3>
+									<div class="review pc">
+										<div class="clearfix">
+											<div class="c100 p80">
+												<span>80</span>
+												<div class="slice">
+													<div class="bar"></div>
+													<div class="fill"></div>
+												</div>
+											</div>
+										</div>
+										<div class="rText">
+											<strong>우수</strong>
+											<small>후기 <span class="lato">500+</span></small>
+										</div>
+									</div><!--.review-->
+									<small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+									<ul>
+										<li>상담건수<strong class="lato">1,000+</strong></li>
+										<li>예상가격<strong class="lato">290,000 ~ 310,000<span class="noto">원</span></strong></li>
+									</ul>
+									<h6>최근 <span>5</span>개의 견적 요청을 받았습니다.</h6>
+								</dd>
+								<dd class="checkArea pc">
+									<ol>
+										<li><input type="checkbox" id="est-05" class="est" checked><label for="est-05"><span></span> 견적신청</label></li>
+										<li><input type="checkbox" id="consult-05" class="consult"><label for="consult-05"><span></span> 상담신청</label></li>
+									</ol>
+								</dd>
+							</dl>
+              <div class="checkArea mobile">
+                <ol>
+                  <li><input type="radio" name="check-app-5" id="est-M-05" class="est" checked><label for="est-M-05"><span></span> 견적요청</label></li>
+                  <li><input type="radio" name="check-app-5" id="consult-M-05" class="consult"><label for="consult-M-05"><span></span> 견적 및 상담요청</label></li>
+                </ol>
+              </div>
+						</div><!--.addBox-->
+						<div class="addBox">
+							<dl>
+                <dt>
+                  <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                  <div class="review mobile">
+                    <span class="star lato">80</span>
+                    <small>후기 <span class="lato">500+</span></small>
+                  </div>
+                </dt>
+								<dd>
+                  <ol>
+										<li class="grade-1">신규</li>
+										<li class="grade-2">프리미엄</li>
+										<li class="grade-3 lato">HOT</li>
+									</ol>
+									<h3>극한클리닝</h3>
+									<div class="review pc">
+										<div class="clearfix">
+											<div class="c100 p80">
+												<span>80</span>
+												<div class="slice">
+													<div class="bar"></div>
+													<div class="fill"></div>
+												</div>
+											</div>
+										</div>
+										<div class="rText">
+											<strong>우수</strong>
+											<small>후기 <span class="lato">500+</span></small>
+										</div>
+									</div><!--.review-->
+									<small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+									<ul>
+										<li>상담건수<strong class="lato">1,000+</strong></li>
+										<li>예상가격<strong class="lato">290,000 ~ 310,000<span class="noto">원</span></strong></li>
+									</ul>
+									<h6>최근 <span>5</span>개의 견적 요청을 받았습니다.</h6>
+								</dd>
+								<dd class="checkArea pc">
+									<ol>
+										<li><input type="checkbox" id="est-06" class="est" checked><label for="est-06"><span></span> 견적신청</label></li>
+										<li><input type="checkbox" id="consult-06" class="consult"><label for="consult-06"><span></span> 상담신청</label></li>
+									</ol>
+								</dd>
+							</dl>
+              <div class="checkArea mobile">
+                <ol>
+                  <li><input type="radio" name="check-app-6" id="est-M-06" class="est" checked><label for="est-M-06"><span></span> 견적요청</label></li>
+                  <li><input type="radio" name="check-app-6" id="consult-M-06" class="consult"><label for="consult-M-06"><span></span> 견적 및 상담요청</label></li>
+                </ol>
+              </div>
+						</div><!--.addBox-->
+					</div>
+				</div>
+			</div>
+      <div class="appBar-bottom mobile">
+        <ul>
+          <li><a href="#none">업체목록보기</a></li>
+          <li><a href="#none" class="active">견적신청내역</a></li>
+        </ul>
+      </div>
+		</article><!--#container-->
+		<footer class="ifAppBar">
+			<div class="inner">
+				<span class="caution">클린벨은 통신판매중개자로서 청소서비스의 주거래 당사자가 아니며, 청소서비스의 분쟁과 계약사항은 회원사와 당사자간에 있습니다.</span>
+				<div class="f_contents">
+					<ul class="busyInfo">
+						<li>클린벨 · ㈜ 컨트롤에프</li>
+						<li>대표 : 최광근</li>
+						<li>사업자등록번호 : <span class="lato">585-86-00882</span></li>
+						<li>통신판매업번호 : <span class="lato">2017-인천계양-0583호</span></li>
+						<li class="lato">E-mail : help@cleanbell.co.kr</li>
+						<li class="lato">FAX : 070-5165-8603</li>
+					</ul>
+					<ul class="csCenter">
+						<li>클린벨 고객센터</li>
+						<li class="lato">1600-1701</li>
+						<li>영업시간 : <span class="lato">09:00 ~ 18:00</span><span class="textblock mblock"></span>(공휴일휴무)</li>
+					</ul>
+					<ol>
+						<li><a href="">개인정보취급방침</a></li>
+						<li><a href="">이용약관</a></li>
+						<li><a href="">클린벨 입점문의</a></li>
+					</ol>
+				</div>
+				<div class="f_bottom">
+					<span class="copyright lato">Copyright © CLEANBELL </span>
+					<ul>
+						<li><a href="#none"><img src="../images-v4/snsIcon_f.png" alt="페이스북"></a></li>
+						<li><a href="#none"><img src="../images-v4/snsIcon_b.png" alt="블로그"></a></li>
+						<li><a href="#none"><img src="../images-v4/snsIcon_i.png" alt="인스타그램"></a></li>
+						<li><a href="#none"><img src="../images-v4/snsIcon_y.png" alt="유튜브"></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<div id="modal_est" class="modalpopup">
+      <div class="inner small">
+        <div class="modal_quotation_top">
+          <h3>신청 변경 확인</h3>
+          <span class="two">[견적요청]으로 변경하시겠습니까?</span>
+          <span class="one">선택하신 업체에게 예상견적가만 받습니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="close_end">취소</a></dt>
+          <dd><a href="#none" class="go_ok">변경</a></dd>
+        </dl>
+      </div>
+    </div>
+		<div id="modal_consult" class="modalpopup">
+      <div class="inner small">
+        <div class="modal_quotation_top">
+          <h3>신청 변경 확인</h3>
+          <span class="two">[견적, 상담 요청]으로 변경하시겠습니까?</span>
+          <span class="one">선택하신 업체에게 예상견적도 받고 전화 상담을 요청합니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="close_end">취소</a></dt>
+          <dd><a href="#none" class="go_ok">변경</a></dd>
+        </dl>
+      </div>
+    </div>
+	</div><!--#wrap-->
+</body>
+</html>

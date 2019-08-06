@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>클린벨</title>
+  <link rel="stylesheet" href="../css-v2/reset.css">
+  <link rel="stylesheet" href="../css-v2/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css-v2/owl.carousel.css">
+  <link rel="stylesheet" href="../css-v2/default.css">
+  <link rel="stylesheet" href="../css-v4/cleaner.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-640.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub-640.css">
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js-v2/cleaner.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="inner">
+        <h1 id="logo"><a href="http://www.cleanbell.co.kr/"><img src="../images-v2/logo.png" alt="클린벨"></a></h1>
+        <a href="javascript:void(0)" class="showDropmenu"></a>
+        <nav id="nav">
+          <ul id="gnb">
+            <li class="cleanbellDrop">
+              <div class="cleanbell-dropmenu">
+                <ul>
+                  <li><a href="javascript:void(0)">청소업체 검색</a></li>
+                  <li><a href="javascript:void(0)">청소업체 선택 TIP</a></li>
+                  <li><a href="javascript:void(0)">신청내역조회</a></li>
+                  <li><a href="javascript:void(0)">손없는날</a></li>
+                  <li class="dropwidth100"><a href="javascript:void(0)">고객센터</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <article id="container">
+      <div class="topBanner">
+        <h2><span>믿고 맡길 수 있는</span><span class="mblock">청소업체를</span> 찾고 있나요?</h2>
+      </div>
+      <div class="searchTab">
+        <div class="inner">
+          <ul class="searchTabTop">
+            <li class="tablink active" data-rel="searchCleaner">
+              <a href="javascript:void(0)">
+                <h4 class="pc_only">입주청소 업체 검색</h4>
+                <h4 class="m_only">입주청소</h4>
+              </a>
+            </li>
+            <li class="tablink" data-rel="searchOneroom">
+              <a href="javascript:void(0)">
+                <h4 class="pc_only">원룸청소 업체 검색</h4>
+                <h4 class="m_only">원룸청소</h4>
+              </a>
+            </li>
+            <li class="tablink" data-rel="searchOriginal">
+              <a href="javascript:void(0)">
+                <h4>기존견적 확인</h4>
+              </a>
+            </li>
+          </ul>
+          <div class="searchBoxes">
+            <div id="searchCleaner">
+              <ul>
+                <li>
+                  <dl class="cleanerKinds">
+                    <dt>청소종류</dt>
+                    <dd>
+                      <a href="javascript:void(0)" id="selectDisplay" class="select-01" onclick="">입주청소</a>
+                      <ol>
+                        <li><a href="javascript:void(0)" data-rel="select-01"><span>입주청소</span></a></li>
+                        <li><a href="javascript:void(0)" data-rel="select-02"><span>이사청소</span></a></li>
+                        <li><a href="javascript:void(0)" data-rel="select-03"><span>인테리어 후 청소</span></a></li>
+                        <li><a href="javascript:void(0)" data-rel="select-04"><span>정기청소</span></a></li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="cleanerDate">
+                  <dl>
+                    <dt>청소날짜</dt>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-07-01</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>이사날짜</dt>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-08-01</a></dd>
+                  </dl>
+                  <div class="cleanDateModal">
+                    <dl>
+                      <dt class="cleanStart_dt">
+                        <label for="">청소날짜</label>
+                        <input type="text" class="date start lato" placeholder="2019-07-01">
+                      </dt>
+                      <script>
+                      $(document).on('ready', function(){
+                        $('#calendarStart').datepicker({
+                          inline:true,
+                          showOtherMonths:true,
+                          showMonthAfterYear:true,
+                          monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                        });
+                        $('#calendarEnd').datepicker({
+                          inline:true,
+                          showOtherMonths:true,
+                          showMonthAfterYear:true,
+                          monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                        });
+                      })
+                      </script>
+                      <dd class="cleanStart_dd">
+                        <div id="calendarStart"></div>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt class="cleanMove_dt">
+                        <label for="">이사날짜</label>
+                        <input type="text" class="date end lato" placeholder="2019-08-01">
+                      </dt>
+                      <dd class="cleanMove_dd">
+                        <div id="calendarEnd"></div>
+                      </dd>
+                    </dl>
+                    <a href="javascript:void(0)" class="selectComplete">날짜 선택 완료</a>
+                  </div>
+                </li>
+              </ul>
+              <a href="javascript:void(0)" class="searchCleanerbtn">청소업체 찾기</a>
+            </div>
+            <div id="searchOneroom">
+              <ul>
+                <li>
+                  <dl class="cleanerKinds">
+                    <dt>청소종류</dt>
+                    <dd>
+                      <a href="javascript:void(0)" onclick="">원룸청소</a>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="cleanerDate">
+                  <dl>
+                    <dt>청소날짜</dt>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-07-01</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>이사날짜</dt>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-08-01</a></dd>
+                  </dl>
+                  <div class="cleanDateModal">
+                    <dl>
+                      <dt class="cleanStart_dt">
+                        <label for="">청소날짜</label>
+                        <input type="text" class="date start lato" placeholder="2019-07-01" value="">
+                      </dt>
+                      <script>
+                      $(document).on('ready', function(){
+                        $('#calendarStart2').datepicker({
+                          inline:true,
+                          showOtherMonths:true,
+                          showMonthAfterYear:true,
+                          monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                        });
+                        $('#calendarEnd2').datepicker({
+                          inline:true,
+                          showOtherMonths:true,
+                          showMonthAfterYear:true,
+                          monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                        });
+                      })
+                      </script>
+                      <dd class="cleanStart_dd">
+                        <div id="calendarStart2"></div>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt class="cleanMove_dt">
+                        <label for="">이사날짜</label>
+                        <input type="text" class="date end lato" placeholder="2019-08-01">
+                      </dt>
+                      <dd class="cleanMove_dd">
+                        <div id="calendarEnd2"></div>
+                      </dd>
+                    </dl>
+                    <a href="javascript:void(0)" class="selectComplete">날짜 선택 완료</a>
+                  </div>
+                </li>
+              </ul>
+              <a href="javascript:void(0)" class="searchCleanerbtn" id="searchbtn-oneroom">청소업체 찾기</a>
+            </div>
+            <div id="searchOriginal" class="firstStep">
+              <form action="">
+                <dl>
+                  <dt><label for="clientName">예약자명</label></dt>
+                  <dd><input type="text" placeholder="정다운" id="clientName"></dd>
+                </dl>
+                <dl>
+                  <dt><label for="clientPhone">휴대전화</label></dt>
+                  <dd id="phoneNum"><input type="text" placeholder="010-1234-5678" class="lato" id="clientPhone"><input type="button" class="certBTN cert_1 ready" value="인증번호발송"></dd>
+                  <dd id="phoneCert"><input type="text" placeholder="1234567" class="lato"><input type="button" class="certBTN cert_2 action" value="인증번호확인"></dd>
+                </dl>
+                <a href="javascript:void(0)" class="searchOriginalbtn">기존 견적 확인</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!--searchTab-->
+      <div class="cleanerData">
+        <div class="cleanerDataBanner">
+          <h3>평수만 입력하면 <span class="textblock mblock">누적데이터를 통해 <span style="color:#fff;">계산된</span> </span><span class="textblock"></span>예상가격을 <span class="mblock"></span>확인할 수 있어요!</h3>
+          <a href="ratecalculate.html" class="moveAlreadyPrice"><span></span></a>
+        </div>
+        <div class="cleanerDataCircle">
+          <div class="inner">
+            <ul>
+              <li>
+                <div class="circle" data-donutty data-value=100><span class="pic_1"></span></div>
+                <dl>
+                  <dt><span class="counter lato" data-count="35896">0</span>건</dt>
+                  <dd>청소 요청 수</dd>
+                </dl>
+              </li>
+              <li>
+                <div class="circle" data-donutty data-value=100><span class="pic_2"></span></div>
+                <dl>
+                  <dt><span class="counter lato" data-count="2512">0</span>건</dt>
+                  <dd>검증된 청소 리뷰</dd>
+                </dl>
+              </li>
+              <li>
+                <div class="circle" data-donutty data-value=100><span class="pic_3"></span></div>
+                <dl>
+                  <dt><span class="counter lato" data-count="212">0</span>개</dt>
+                  <dd>신청 가능한 청소 업체</dd>
+                </dl>
+              </li>
+              <li>
+                <div class="circle" data-donutty data-value=100><span class="pic_4"></span></div>
+                <dl>
+                  <dt><span class="counter lato" data-count="1985">0</span>세대</dt>
+                  <dd>클린벨이 시공한 세대수</dd>
+                </dl>
+              </li>
+            </ul>
+            <script type="text/javascript" src="../js-v2/countUp.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="optionEnter">
+        <div class="inner">
+          <dl class="subTitleBox">
+            <dt>내가 필요한<span class="textblock mblock"></span> 조건을 입력하고,</dt>
+            <dd>세제, 인력구성, 결제방법 등을 입력하세요.</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="compareCleaner">
+        <div class="inner">
+          <dl class="subTitleBox">
+            <dt>업체를 선택한 후,<span class="textblock mblock"></span>가격을 비교하고</dt>
+            <dd>마음에 드는 업체에 견적신청을 하고<span class="textblock mblock"></span> 가격을 비교해보세요!</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="mobileApp">
+        <div class="inner">
+          <dl class="subTitleBox">
+            <dt>모바일 앱에서도 <span class="mblock"></span>클린벨을<span class="textblock"></span> 간편하게 <span class="mblock"></span>이용할 수 있습니다.</dt>
+            <dd>앱을 통해 10만건의 청소경험을 확인해보세요.</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="companyRank">
+        <div class="inner">
+          <h3>고객님이 보내주신 <span class="mblock"></span>평가점수 기반의<span class="textblock mblock"></span>업체 순위를 확인하세요!</h3>
+          <a href="javascript:void(0)">업체순위 보러가기</a>
+        </div>
+      </div>
+      <div class="withCleaner">
+        <div>
+          <h3>청소 잘하는 사장님!<span class="textblock mblock"></span>클린벨과 함께 <span class="mblock"></span>성장해보세요</h3>
+          <a href="javascript:void(0)">클린벨 입점 신청하기</a>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <div class="inner">
+        <span class="caution">클린벨은 통신판매중개자로서 청소서비스의 주거래 당사자가 아니며, 청소서비스의 분쟁과 계약사항은 회원사와 당사자간에 있습니다.</span>
+        <div class="f_contents">
+          <ul class="busyInfo">
+            <li>클린벨 · ㈜ 컨트롤에프</li>
+            <li>대표 : 최광근</li>
+            <li>사업자등록번호 : <span class="lato">585-86-00882</span></li>
+            <li>통신판매업번호 : <span class="lato">2017-인천계양-0583호</span></li>
+            <li class="lato">E-mail : help@cleanbell.co.kr</li>
+            <li class="lato">FAX : 070-5165-8603</li>
+          </ul>
+          <ul class="csCenter">
+            <li>클린벨 고객센터</li>
+            <li class="lato">1600-1701</li>
+            <li>영업시간 : <span class="lato">09:00 ~ 18:00</span><span class="textblock mblock"></span>(공휴일휴무)</li>
+          </ul>
+          <ol>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">클린벨 입점문의</a></li>
+          </ol>
+        </div>
+        <div class="f_bottom">
+          <span class="copyright lato">Copyright © CLEANBELL </span>
+          <ul>
+            <li><a href="#none"><img src="../images-v4/snsIcon_f.png" alt="페이스북"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_b.png" alt="블로그"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_i.png" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_y.png" alt="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="modal-oneroom" class="modalpopup">
+      <div class="inner">
+        <div class="modal_survey">
+          <a href="javascript:void(0)" class="closeModal"></a>
+          <div class="surveyBoxes">
+            <section id="step1">
+              <h3><span>고객님의 기본정보</span>를 입력해주세요.</h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 active" data-rel="step1">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2" data-rel="step2">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3" data-rel="step3">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4" data-rel="step4">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <ul>
+                    <li>
+                      <label for="">예약자명</label>
+                      <input type="text" placeholder="정다운">
+                    </li>
+                  </ul>
+                  <ul>
+                    <li id="phoneNum">
+                      <label for="">휴대전화</label>
+                      <input type="tel" placeholder="010-1234-5678">
+                      <input type="button" class="btn_cert_1 ready" value="인증번호발송" id="oneroom-btn-cert-1">
+                    </li>
+                    <li id="phoneCert" class="oneroom-cert">
+                      <input type="text" placeholder="1234567">
+                      <input type="button" class="btn_cert_2" value="인증번호확인">
+                    </li>
+                  </ul>
+                </div>
+                <div class="step_check">
+                  <input type="checkbox" checked id="step1_agree">
+                  <label for="step1_agree"><span></span>클린벨 <strong>이용약관</strong> 및 <strong>개인정보 취급방침</strong>에 대해 동의합니다. (필수)</label>
+                  <input type="checkbox" id="step2_agree">
+                  <label for="step2_agree"><span></span>이사업체도 같이 추천해주세요. (선택)</label>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep closeStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <section id="step2">
+              <h3><span>고객님의 주소</span>를 입력해주세요.</h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 active" data-rel="step2">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3" data-rel="step3">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4" data-rel="step4">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dt>
+                      <label for="postcode">우편번호</label>
+                      <input type="text" placeholder="우편번호" id="postcode">
+                      <input type="button" onclick="execDaumPostcode()" value="우편번호 검색">
+                    </dt>
+                    <dd>
+                      <label for="">주소</label>
+                      <input type="text" id="address" placeholder="주소">
+                      <input type="text" id="detailAddress" placeholder="상세주소">
+                      <input type="hidden" id="extraAddress" placeholder="참고항목">
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+                <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+                <script>
+                    function execDaumPostcode() {
+                        new daum.Postcode({
+                            oncomplete: function(data) {
+                                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                var addr = ''; // 주소 변수
+                                var extraAddr = ''; // 참고항목 변수
+
+                                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                    addr = data.roadAddress;
+                                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                    addr = data.jibunAddress;
+                                }
+
+                                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                if(data.userSelectedType === 'R'){
+                                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                        extraAddr += data.bname;
+                                    }
+                                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                    }
+                                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                    if(extraAddr !== ''){
+                                        extraAddr = ' (' + extraAddr + ')';
+                                    }
+                                    // 조합된 참고항목을 해당 필드에 넣는다.
+                                    document.getElementById("extraAddress").value = extraAddr;
+
+                                } else {
+                                    document.getElementById("extraAddress").value = '';
+                                }
+
+                                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                document.getElementById('postcode').value = data.zonecode;
+                                document.getElementById("address").value = addr;
+                                // 커서를 상세주소 필드로 이동한다.
+                                document.getElementById("detailAddress").focus();
+                            }
+                        }).open();
+                    }
+                </script>
+              </form>
+            </section>
+            <section id="step3">
+              <h3>견적을 받아보실<br><span>공간 타입</span>을 선택하세요.</h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 on" data-rel="step2">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3 active" data-rel="step3">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4" data-rel="step4">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>공간 타입</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-1" class="spaceCheck">
+                          <label for="onespace-1">기본형<small>방 1 + 화장실 1</small></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-2" class="spaceCheck">
+                          <label for="onespace-2">분리형<small>방 1 + 거실 1 + 화장실 1</small></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-3" class="spaceCheck">
+                          <label for="onespace-3">발코니형<small>방 1 + 화장실 1 + 발코니 1</small></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-4" class="spaceCheck">
+                          <label for="onespace-4">복층형<small>방 1 + 거실 1<span class="mblock"></span> + 화장실 1 + 계단 1	</small></label>
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <section id="step4">
+              <h3><span>추가로 청소를 원하시는 가전제품</span>을<br>선택해주세요. <small>중복선택가능</small><small>추가요금발생</small></h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 on" data-rel="step2">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3 on" data-rel="step3">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4 active" data-rel="step4">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>기본 청소 범위 외 청소서비스</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" value="" class="" id="otherclean-1">
+                          <label for="otherclean-1">빌트인 냉장고</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="" id="otherclean-2">
+                          <label for="otherclean-2">오븐</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="" id="otherclean-3">
+                          <label for="otherclean-3">빌트인 세탁기</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="" id="otherclean-4">
+                          <label for="otherclean-4">식기세척기</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="" id="otherclean-5">
+                          <label for="otherclean-5">에어컨</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="" id="otherclean-6">
+                          <label for="otherclean-6">없음</label>
+                        </li>
+                      </ol>
+                      <span>빌트인 가전 청소는 <span>전문적인 분해 청소가 아닙니다.</span></span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-close-1" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>검색을 끝내시겠어요?</h3>
+          <span class="two">정말 검색을 그만두시겠어요?</span>
+          <span class="one">아직 작성이 끝나지 않았습니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="modal_close">검색종료</a></dt>
+          <dd><a href="#none" class="go_ok">계속검색</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal-close-2" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>검색을 끝내시겠어요?</h3>
+          <span class="two">정말 검색을 그만두시겠어요?</span>
+          <span class="one">20%만 더 작성하시면 돼요!</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="modal_close">검색종료</a></dt>
+          <dd><a href="#none" class="go_ok">계속검색</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div><!--#wrap-->
+</body>
+</html>
