@@ -360,6 +360,7 @@ $(function () {
   $('#searchbtn-oneroom').click(function(){
     $('#modal-oneroom').show();
     $('.modal_survey').show();
+    $('#modal-oneroom #step1').show();
   });
   $('#oneroom-btn-cert-1').on('click', function(){
     $('.oneroom-cert').show();
@@ -369,6 +370,10 @@ $(function () {
   });
   $('#modal-oneroom .closeModal').on('click', function(){
     $('#modal-oneroom').hide();
+    $('#modal-oneroom #step1').show();
+    $('#modal-oneroom #step2').hide();
+    $('#modal-oneroom #step3').hide();
+    $('#modal-oneroom #step4').hide();
   })
   $('#modal .closeModal').on('click', function(){
     $('#modal').hide();
@@ -398,12 +403,12 @@ $(function () {
   });
 
   //pc버전 업체리스트 마우스오버시 툴팁
-  $('.addBox').children('a').each(function(){
-    $(this).mouseover(function(){
-      $(this).children('.boxTip').show();
+  $('.est-price').each(function(){
+    $(this).mouseenter(function(){
+      $(this).parents('.addBox').addClass('showTip');
     });
     $(this).mouseout(function(){
-      $(this).children('.boxTip').hide();
+      $(this).parents('.addBox').removeClass('showTip');
     });
   });
 
@@ -439,11 +444,12 @@ $(function () {
   });
 
   //모바일 달력버튼 클릭시
-  $('.openBarCal').on('click', function(){
-    $('.datepicker-M').show();
-    $('.datepicker-M .closeBarCal').click(function(){
-      $('.datepicker-M').hide();
-    })
+  $('.CalendarBox .openBarCal').on('click', function(){
+    if($('.CalendarBox').hasClass('datepicker-M')){
+      $('.CalendarBox').removeClass('datepicker-M');
+    } else {
+      $('.CalendarBox').addClass('datepicker-M');
+    }
   });
 
   //모바일 상세조건 클릭시
@@ -488,5 +494,24 @@ $(function () {
 
   $('.modalpopup .close_end').click(function(){
     $('.modalpopup').hide();
-  })
+  });
+
+  //190805 추가
+  $('#searchCleaner .searchCleanerbtn').click(function(){
+    $('#modal-main').show();
+    $('.modal_intro-main').show();
+    $('#modal-main .modal_close').click(function(){
+      $('.modal_intro-main').hide();
+      $('.modal_survey-main').show();
+    });
+  });
+  $('#modal-main .modal_tablink').click(function(){
+    $('.surveyBoxes-main section').hide();
+    $('#' + $(this).data('rel')).show();
+  });
+  $('#modal-main .closeModal').click(function(){
+    $('#modal-main').hide();
+    $('.modal_intro-main').show();
+    $('.modal_survey-main').hide();
+  });
 });

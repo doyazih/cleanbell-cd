@@ -84,6 +84,7 @@
   .searchResultBottom .cleanerKinds dd li:nth-of-type(2) a span::before{width:23px;height:13px;background-size:23px;}
   .searchResultBottom .cleanerKinds dd li:nth-of-type(3) a span{width:fit-content;}
   .searchResultBottom .cleanerKinds dd li:nth-of-type(3) a span::before{width:17px;height:16px;background-size:17px;}
+  .searchResultBottom .cleanerKinds dd li:nth-of-type(4) a span::before{width:19px;height:16px;background-size:19px;}
   .searchResultBottom .cleanerKinds dd li:last-of-type a span::before{width:19px;height:16px;background-size:19px;}
   .searchResultBottom .cleanerKinds dd li a span::after{height:11px;font-size:11px;line-height:11px;}
 
@@ -646,20 +647,22 @@
 
   .companyList{margin:155px 0 0;}
   #container .companyList .inner{margin:0;}
+  .filCalendar{height:40px;background:#f4f0ff;}
   .filCalendar .CalendarBox{position:relative;left:inherit;width:100%;transform:none;}
-  .filCalendar .CalendarBox input[type=text]{position:relative;padding:10px 40px;width:calc(100% - 80px);font-weight:600;text-align:center;background:#f4f0ff;border:0;border-radius:0;}
-  .filCalendar .CalendarBox input[type=button]{position:absolute;top:50%;right:28px;width:12px;height:8px;background:url(../images-v4/arrow_bottom.png) no-repeat;content:'';
+  .filCalendar .CalendarBox input[type=text]{position:relative;padding:10px 40px;width:calc(100% - 80px);font-weight:600;text-align:center;border:0;border-radius:0;background:url(../images-v4/arrow_bottom.png) 93% center no-repeat;}
+  .filCalendar .CalendarBox input[type=button]{display:none;position:absolute;top:50%;right:28px;width:12px;height:8px;background:url(../images-v4/arrow_bottom.png) no-repeat;content:'';
   transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
   .filCalendar .CalendarBox input[type=text] + label{left:22px;width:14px;height:14px;background:url(../images-v4/calendarIcon_p.png) no-repeat;background-size:14px;}
   .filCalendar .CalendarBox input[type=text] + label::after{display:none;}
+  .filCalendar .CalendarBox h4{display:none;}
 
-  .datepicker-M{display:none;position:absolute;top:10%;margin:0 20px;width:calc(100% - 40px);z-index:50;box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);-webkit-box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);-moz-box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);-o-box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);}
-  .datepicker-M h4{padding:20px 20px 40px;font-size:13px;line-height:13px;font-weight:350;letter-spacing:-0.75px;color:#fae6cd;background:#6131ce;}
-  .filCalendar .datepicker-M .CalendarBox{position:absolute;left:50%;width:calc(100% - 40px);
-  transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
-  .filCalendar .datepicker-M .CalendarBox input[type=text]{padding:10px 56px 10px;width:calc(100% - 112px);border:1px solid #6131ce;border-radius:3px;background:#fff;}
-  .filCalendar .datepicker-M .CalendarBox input[type=text] + label::after{display:block;width:1px;background:#f1f1f1;}
-  .filCalendar .datepicker-M .CalendarBox input[type=button]{right:18px;background:url(../images-v4/arrow_top_p.png) no-repeat;}
+  .filCalendar .CalendarBox.datepicker-M{position:absolute;top:0;margin:0 20px;width:calc(100% - 40px);height:340%;background:#fff;z-index:50;box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);-webkit-box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);-moz-box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);-o-box-shadow:0px 2px 8px 0px rgba(0,0,0,0.3);}
+  .filCalendar .CalendarBox.datepicker-M h4{display:block;padding:20px 20px 40px;font-size:13px;line-height:13px;font-weight:350;letter-spacing:-0.75px;color:#fae6cd;background:#6131ce;}
+  .filCalendar .CalendarBox.datepicker-M input[type=text]{position:absolute;left:50%;top:15%;padding:10px 56px 10px;width:calc(100% - 152px);border:1px solid #6131ce;border-radius:3px;background:#fff;
+  transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+  .filCalendar .CalendarBox.datepicker-M input[type=text] + label{top:22%;left:15%;}
+  .filCalendar .CalendarBox.datepicker-M input[type=text] + label::after{display:block;width:1px;background:#f1f1f1;}
+  .filCalendar .CalendarBox.datepicker-M input[type=button]{display:block;top:22%;right:38px;background:url(../images-v4/arrow_top_p.png) no-repeat;}
   .datepicker-M .ui-datepicker{padding:40px 15px 0;width:calc(100% - 30px);}
   .datepicker-M .ui-datepicker th{padding:15px 0;}
   .datepicker-M .ui-state-active{color:#fff !important;background:#6131ce !important;border-radius:3px;}
@@ -823,8 +826,69 @@
   .searchResultBottom .cleanerKinds dd a.select-03{padding-left:20px;width:fit-content;}
   .searchResultBottom .cleanerKinds dd a.select-03::before{width:17px;height:16px;background-size:17px;}
   .searchResultBottom .cleanerKinds dd a.select-04::before{width:19px;height:16px;background-size:19px;}
+  .searchResultBottom .cleanerKinds dd a.select-05::before{width:19px;height:16px;background-size:19px;}
 
   .floatBtn.v2 a span{width:50px;height:50px;background-size:50px;}
 
-  .boxTip{padding:10px;width:50%;font-size:11px;line-height:15px;}
+  .boxTip{right:20%;bottom:-30%;padding:10px;width:50%;font-size:11px;line-height:15px;}
+
+  /* 190730 추가 */
+  .addBox dd::after{position:absolute;right:0;top:50%;width:7.5px;height:12px;background:url(../images-v4/companyList-arrow-m.png) no-repeat;background-size:7.5px;content:'';
+  transform:translate(0,-50%);-webkit-transform:translate(0,-50%);}
+  .addBox .premium dd::after{background:url(../images-v4/companyList-arrow-m-v2.png) no-repeat;background-size:7.5px;}
+  .inputbox dl dd textarea{padding:15px;font-size:12px;line-height:20px;height:100px;overflow-y:scroll;}
+
+  .addListTip.v2{width:60px;right:0;font-size:10px;padding:5px 10px;top:-45%;}
+
+  /* 190805 */
+  .surveyBoxes-main h3{padding:0 0 35px;font-size:30px;line-height:40px;white-space:inherit;word-break:keep-all;}
+  .surveyBoxes-main h3 small{margin:-5px 0 0;padding:0 5px;width:fit-content;height:21px;font-size:10px;line-height:19px;}
+
+  .modalpopup .modal_intro-main{padding:40px;width:calc(100% - 80px)}
+  .modalpopup .modal_intro-main h1{margin:0 0 50px;}
+  .modalpopup .modal_intro-main h1 img{width:97px;}
+  .modalpopup .modal_intro-main h3{font-size:18px;line-height:18px;}
+  .modalpopup .modal_intro-main h2{margin:0 0 30px;font-size:30px;line-height:40px;white-space:nowrap;}
+  .modalpopup .modal_intro-main h2 .textblock.mblock{display:block !important;}
+  .modalpopup .modal_intro-main h2 .mblock{display:block;}
+  .modalpopup .modal_intro-main p{font-size:12px;line-height:20px;}
+  .modalpopup .modal_intro-main a{padding-right:17.5px;margin:55px 0 0;width:fit-content;font-size:14px;line-height:14px;}
+  .modalpopup .modal_intro-main a::after{width:7.5px;height:12px;background-size:7.5px;transform:translate(0,-35%);-webkit-transform:translate(0,-35%);-moz-transform:translate(0,-35%);-o-transform:translate(0,-35%);}
+
+  .modalpopup .modal_survey-main{padding:50px 20px;}
+
+  #step2-main .inputbox dl dt{display:block;width:100%;}
+  #step2-main .inputbox dl dt input[type=button]{width:81px;height:25px;line-height:25px;}
+  #step2-main .inputbox dl dd{display:block;width:100%;}
+  #step2-main .inputbox dl dd label{padding:0 0 6px;font-size:14px;line-height:14px;}
+  #step2-main .inputbox dl dd input[type=text]{padding:14px 0;width:100%;height:16px;font-size:16px;line-height:16px;}
+  #step2-main .inputbox dl dd input[type=text]#detailAddress-main{margin-top:10px;}
+
+  #step4-main .inputbox dl dd:last-of-type h4, #step5-main .inputbox dl dd:last-of-type h4{margin:40px 0 0}
+  #step4-main .inputbox dl dd ol li, #step5-main .inputbox dl dd ol li{margin:0 0 8px;width:calc(50% - 4px);height:115px;}
+  #step5-main .inputbox dl dd.howpay ol li{height:40px;}
+  #step4-main .inputbox dl dd ol li:nth-of-type(odd), #step5-main .inputbox dl dd ol li:nth-of-type(odd){margin-right:4px}
+  #step4-main .inputbox dl dd ol li:nth-of-type(even), #step5-main .inputbox dl dd ol li:nth-of-type(even){margin-left:4px;}
+  #step4-main .inputbox dl dd ol li input[type=checkbox] + label, #step5-main .inputbox dl dd ol li input[type=checkbox] + label{padding:15px 0 0;}
+  #step5-main .inputbox dl dd.howpay ol li input[type=checkbox] + label{padding:0;line-height:40px;}
+  #step4-main .inputbox dl dd ol li input[type=checkbox] + label::after,
+  #step5-main .inputbox dl dd ol li input[type=checkbox] + label::after{transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+  #step4-main .inputbox ul li{margin-right:0;width:100%;}
+  #step4-main .inputbox ul li label{display:inline-block;width:33.33%;font-size:13px;line-height:40px;text-align:left;color:#464646;}
+  #step4-main .inputbox ul li .numberBox{display:inline-block;width:66.66%;}
+  #step4-main .inputbox ul li .numberBox input[type=text]{padding:12px 0;width:100%;height:40px;font-size:16px;line-height:16px;}
+  #step5-main .inputbox .addOption, #step5-main .inputbox .addTax{padding:0 0 10px;font-size:11px;line-height:11px;}
+
+  #step6-main .inputbox dl dd ol li{float:inherit;margin:0 0 10px;width:100%;height:70px;}
+  #step6-main .inputbox dl dd ol li:nth-of-type(odd){margin-right:0}
+  #step6-main .inputbox dl dd ol li:nth-of-type(even){margin-left:0}
+  #step6-main .inputbox dl dd ol li input[type=checkbox] + label{padding:10px 55px 10px 65px}
+  #step6-main .inputbox dl dd ol li input[type=checkbox]:checked + label{padding-top:10px;border:1px solid #6131ce;}
+  #step6-main .inputbox dl dd ol li input[type=checkbox] + label h5{font-size:12px;line-height:12px;}
+  #step6-main .inputbox dl dd ol li input[type=checkbox] + label span{font-size:10px;line-height:13px;}
+  #step6-main .inputbox dl dd ol li input[type=checkbox] + label::before{right:15px;width:17.5px;height:13.5px;background-size:17.5px;}
+  #step6-main .inputbox dl dd ol li input[type=checkbox]:checked + label::before{width:17.5px;height:13.5px;background-size:17.5px;}
+  #step6-main .inputbox dl dd textarea{padding:15px;font-size:12px;line-height:20px;height:100px;overflow-y:scroll;}
+
+  .modalpopup .modal_intro-main a.closeModal.W{top:20px;right:20px;padding-right:0;width:14px;height:14px;background-size:14px;}
 }

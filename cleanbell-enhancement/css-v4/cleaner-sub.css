@@ -256,7 +256,7 @@ transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:t
 #step6 .inputbox dl dd ol li input[type=checkbox]:checked + label{padding-top:25px;background:#fafafa;border:2px solid #6131ce;box-shadow:none;}
 #step6 .inputbox dl dd ol li input[type=checkbox]:checked + label::before{background:url(../images-v4/addService_checked.png) no-repeat;}
 #step6 .inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
-
+.inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
 
 .step_check{display:none;position:relative;padding:30px 0 30px 150px;}
 .step_check input{position:absolute;display:none;}
@@ -881,7 +881,7 @@ transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:t
 
 #modal-oneroom .surveyBoxes h3 small:last-child{margin-left:10px;}
 #modal-oneroom #step4 .inputbox dl dd:first-of-type{border-bottom:0;}
-#modal-oneroom #step4 .inputbox dl dd:last-of-type h4{margin-top:10px;}
+#modal-oneroom #step4 .inputbox dl dd:last-of-type h4{margin-top:50px;}
 #modal-oneroom #step4 .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);}
 #modal-oneroom #step4 .inputbox dl dd span{font-size:18px;line-height:18px;letter-spacing:-0.5px;color:#7c7c7c;}
 #modal-oneroom #step4 .inputbox dl dd span span{color:#6131ce;}
@@ -955,8 +955,9 @@ box-shadow: 0px 4px 10px rgba(0,0,0,0.5);}
 .filCalendar.float input[type=text] + label{background:url(../images-v4/filter-calendar-i-float.png) no-repeat;}
 .filCalendar.float input[type=text] + label::after{background:#3c225f;}
 
-.filCalendar #calendarChange{display:none;position:absolute;top:120px;left:50%;width:calc(100% - 60px);
-transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.filCalendar #calendarChange{position:absolute;top:50%;left:50%;width:100%;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.filCalendar.float #calendarChange{top:0;}
 .filCalendar #calendarChange .ui-datepicker{padding:0;width:100%;}
 .filCalendar #calendarChange a.ui-state-active,
 .filCalendar #calendarChange a.ui-widget-content .ui-state-active,
@@ -1048,8 +1049,8 @@ transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:t
 transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
 .addBox a.checked dl{mix-blend-mode:luminosity;}
 
-
-.boxTip{display:none;position:absolute;right:0;bottom:-35%;padding:20px;width:290px;font-size:14px;line-height:20px;font-weight:350;letter-spacing:-0.75px;color:#3c225f;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:15;}
+.showTip .boxTip{display:block;}
+.boxTip{display:none;position:absolute;right:0;bottom:-15%;padding:20px;width:290px;font-size:14px;line-height:20px;font-weight:350;letter-spacing:-0.75px;color:#3c225f;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:15;}
 .boxTip::before{position:absolute;top:-10px;left:45%;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #e3e3e3;z-index:1;content:'';
 transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
 .boxTip::after{position:absolute;top:-9px;left:45%;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:9px solid #fff;z-index:2;content:'';
@@ -1176,6 +1177,8 @@ transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-trans
 .searchResultBottom .cleanerKinds dd a.select-03{width:154px;}
 .searchResultBottom .cleanerKinds dd a.select-04::before{width:28px;height:24px;background:url(../images-v4/cleanerKinds_icon_04_w.png) no-repeat;}
 .searchResultBottom .cleanerKinds dd a.select-04::after{content:'정기적으로 진행하는 청소';}
+.searchResultBottom .cleanerKinds dd a.select-05::before{width:28px;height:25px;background:url(../images-v4/cleanerKinds_icon_05_w.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a.select-05::after{content:'짐이 있는 상태에서 청소';}
 
 @media (min-width:1700px) and (max-width:1850px) {
   .floatBtn{right:15%;}
@@ -1193,3 +1196,85 @@ transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-trans
 .floatBtn.v2 a span{position:absolute;top:50%;left:50%;display:block;width:70px;height:70px;background:url(../images-v4/floatBtn-v2.png) no-repeat;
 transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
 .bgNone{background:none !important;border:0 !important;}
+
+.addListTip{position:absolute;right:-20%;top:-50%;padding:10px;width:150px;font-size:14px;line-height:20px;font-weight:350;letter-spacing:-0.75px;color:#3c225f;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:10;text-align:center;}
+.addListTip::before{position:absolute;bottom:-10px;left:50%;border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #e3e3e3;z-index:1;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.addListTip::after{position:absolute;bottom:-9px;left:50%;border-left:9px solid transparent;border-right:9px solid transparent;border-top:9px solid #fff;z-index:2;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.addListTip.blinking{animation:blink 7s ease-in-out infinite alternate;-webkit-animation:blink 7s ease-in-out infinite alternate;-moz-animation:blink 7s ease-in-out infinite alternate;}
+.addListTip.v2{width:100px;right:0;}
+
+/* 190805 */
+.surveyBoxes-main{position:relative;}
+.surveyBoxes-main > section{display:none;}
+.surveyBoxes-main > section:first-child{display:block;}
+.surveyBoxes-main h3{padding:0 25px 75px;font-size:54px;line-height:70px;font-weight:350;letter-spacing:-1.75px;color:#6131ce;white-space:nowrap;}
+.surveyBoxes-main h3 span{color:#322d4f;}
+.surveyBoxes-main h3 small{display:inline-block;width:118px;height:38px;font-size:18px;line-height:37px;border-radius:3px;border:1px solid #7c7c7c;
+text-align:center;box-sizing:border-box;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;vertical-align:middle;}
+
+.modalpopup .modal_intro-main{display:none;padding:100px;background:#322d4f;}
+.modalpopup .modal_intro-main h1{margin:0 0 60px;}
+.modalpopup .modal_intro-main h3{margin:0 0 20px;font-size:30px;line-height:30px;font-weight:400;letter-spacing:-1.75px;color:#fae6cd;}
+.modalpopup .modal_intro-main h2{margin:0 0 40px;font-size:54px;line-height:70px;font-weight:350;letter-spacing:-1.75px;color:#fff;}
+.modalpopup .modal_intro-main p{font-size:18px;line-height:32px;font-weight:400;letter-spacing:-1.5px;color:#fff;}
+.modalpopup .modal_intro-main a{position:relative;margin:70px 0 0;display:block;width:160px;font-size:24px;line-height:24px;font-weight:400;letter-spacing:-1.5px;color:#fae6cd;text-align:left;}
+.modalpopup .modal_intro-main a::after{position:absolute;right:0;top:50%;width:13px;height:20px;background:url(../images-v4/arrow_right_sub.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.modalpopup .modal_intro-main a.closeModal.W{position:absolute;top:40px;right:40px;margin:0;display:block;width:28px;height:28px;font-size:0;background:url(../images-v4/closeModalW.png) no-repeat;z-index:11;}
+.modalpopup .modal_intro-main a.closeModal.W::after{display:none;}
+
+.modalpopup .modal_survey-main{display:none;padding:100px 50px;background:#f9f9f9;font-size:0;}
+
+#step2-main .inputbox dl dt{display:inline-block;width:37%;margin-right:40px;}
+#step2-main .inputbox dl dt input[type=button]{position:absolute;bottom:10px;right:0;width:132px;height:46px;line-height:46px;border-radius:23px;color:#fff;background:#322d4f;}
+#step2-main .inputbox dl dd{display:inline-block;width:calc(63% - 40px);}
+#step2-main .inputbox dl dd label{display:block;padding:0 0 25px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+#step2-main .inputbox dl dd input[type=text]{display:block;padding:18px 0;height:22px;width:100%;font-size:22px;line-height:22px;font-weight:500;letter-spacing:-1.5px;color:#464646;border-bottom:1px solid #a9a9a9;}
+#step2-main .inputbox dl dd input[type=text]#detailAddress-main{margin-top:20px;}
+#step2-main .step_arrow dl dd a.nextStep{display:block;padding:0;}
+
+#step4-main .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 30px 26px 80px;}
+#step4-main .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+#step4-main .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+#step4-main .inputbox dl dd:last-of-type h4{margin:60px 0 0}
+#step4-main .inputbox ul{width:100%;margin:0;}
+#step4-main .inputbox ul li{display:inline-block;width:225px;border:0;margin-right:30px;}
+#step4-main .inputbox ul li:last-of-type{margin-right:0}
+#step4-main .inputbox ul li label{text-align:center;}
+#step4-main .inputbox ul li .numberBox{position:relative;}
+#step4-main .inputbox ul li .numberBox button.spaceMinus{position:absolute;left:30px;top:50%;width:12px;height:2px;background:url(../images-v4/minus.png) no-repeat;content:'';border:0;padding:0;margin:0;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step4-main .inputbox ul li .numberBox button.spacePlus{position:absolute;right:30px;top:50%;width:12px;height:12px;background:url(../images-v4/plus.png) no-repeat;content:'';border:0;padding:0;margin:0;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step4-main .inputbox ul li .numberBox input[type=text]{width:225px;height:50px;background:none;box-sizing:border-box;border:1px solid #dcdcdc;border-radius:50px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;text-align:center;}
+
+#step5-main .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 30px 26px 80px;}
+#step5-main .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+#step5-main .inputbox .addOption, #step5-main .inputbox .addTax{display:none;padding:0 0 20px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;}
+#step5-main .inputbox .addOption.on, #step5-main .inputbox .addTax.on{display:block;}
+#step5-main .inputbox .addOption span.lato, #step5-main .inputbox .addTax span.lato{color:#6131ce;}
+#step5-main .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+#step5-main .inputbox dl dd.howpay{}
+#step5-main .inputbox dl dd.howpay h4{margin:60px 0 0}
+#step5-main .inputbox dl dd.howpay ol li input[type=checkbox] + label{padding:26px 0;}
+
+#step6-main .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+#step6-main .inputbox dl dd:last-of-type h4{margin:60px 0 0}
+#step6-main .inputbox dl dd ol li{float:left;margin:0 0 15px;width:calc(50% - 7.5px);height:120px;}
+#step6-main .inputbox dl dd ol li:nth-of-type(odd){margin-right:7.5px;}
+#step6-main .inputbox dl dd ol li:nth-of-type(even){margin-left:7.5px;}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 75px 26px 106px;text-align:left;white-space:normal;}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label::before{position:absolute;top:50%;right:24px;width:27px;height:21px;background:url(../images-v4/addService_check.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label h5{padding:0 0 10px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label span{font-size:16px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#7c7c7c;}
+
+#step6-main .inputbox dl dd ol li input[type=checkbox]:checked + label{padding-top:25px;background:#fafafa;border:2px solid #6131ce;box-shadow:none;}
+#step6-main .inputbox dl dd ol li input[type=checkbox]:checked + label::before{background:url(../images-v4/addService_checked.png) no-repeat;}
+#step6-main .inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
+.inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}

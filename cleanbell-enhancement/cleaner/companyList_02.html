@@ -20,6 +20,18 @@
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js-v2/cleaner.js"></script>
   <script src="../js-v2/lottie.js"></script>
+  <style>
+    .ui-datepicker{width:172px;}
+    .ui-state-active{color:#fff !important;background:#6131ce !important;}
+    .ui-datepicker .ui-datepicker-header{margin:15px 0 0;}
+    .ui-datepicker th{padding:15px 0;}
+    .ui-datepicker td span, .ui-datepicker td a{margin:0 auto;padding:5px 0;border-radius:3px;}
+    @media (max-width:640px) {
+      .ui-datepicker{top:160px !important;left:40px !important;right:40px;width:calc(100% - 80px);}
+      .ui-datepicker th{padding:15px 0 10px;}
+      .ui-datepicker td span, .ui-datepicker td a{margin:1px auto;}
+    }
+  </style>
 </head>
 <body>
 	<div id="wrap">
@@ -55,31 +67,44 @@
 		<article id="container" class="subcontainer">
 			<div class="companyList">
 				<div class="inner">
-					<div class="filter pc">
+          <div class="filter pc">
 						<dl>
 							<dt>
-								<input type="submit" id="filter-search" value=""><label for="filter-search"><img src="../images-v4/filter-search.png" alt="search">검색</label>
-								<div class="addNoneTip blinking">여기서 필터를 풀고 검색을 진행하세요!</div>
-							</dt>
+                <input type="submit" id="filter-search" value=""><label for="filter-search"><img src="../images-v4/filter-search.png" alt="search">검색</label>
+                <div class="addNoneTip blinking">여기서 필터를 풀고 검색을 진행하세요!</div>
+              </dt>
 							<dd class="filCalendar">
 								<h4>청소일</h4>
-								<div class="CalendarBox">
-									<input type="text" name="" value="2019-05-01 (수)" id="filCal" class="">
-									<label for="filCal"></label>
-								</div>
 								<script>
 								$(document).on('ready', function(){
-									$('#calendarChange').datepicker({
+									$('#filCal').datepicker({
 										inline:true,
+                    dateFormat:'yy-mm-dd',
+                    altFormat:'D',
 										showOtherMonths:true,
 										showMonthAfterYear:true,
 										monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
-										dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+										dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                    onClose:function(){
+                      $('.filCalendar').removeClass('float');
+                      var date = new Date($('#filCal').datepicker(
+                        {dateFormat:'yy-mm-dd'}
+                      ).val()),
+                      week = new Array('일', '월', '화', '수', '목', '금', '토');
+                      if(week[date.getDay()]!=undefined){
+                        $('#filCal').val($('#filCal').val()+"  "+"("+(week[date.getDay()])+")");
+                      }
+                    }
 									});
-                  $('#calendarChange').datepicker('setDate', 'today');
+                  $('#filCal').datepicker('setDate', 'today');
 								});
 								</script>
-								<div id="calendarChange"></div>
+								<div id="calendarChange">
+                  <div class="CalendarBox">
+  									<input type="text" name="" value="2019-05-01 (수)" id="filCal" class="">
+  									<label for="filCal"></label>
+  								</div>
+                </div>
 							</dd>
 							<dd>
 								<h4>결제방법</h4>
@@ -120,38 +145,43 @@
           <div class="appBar-top mobile">
             <dl>
               <dt class="filCalendar">
-								<div class="CalendarBox">
-									<input type="text" name="" value="2019-05-01 (수)" id="filCal" class="lato">
-									<label for="filCal"></label>
-                  <input type="button" class="mobile openBarCal">
-								</div>
 								<script>
 								$(document).on('ready', function(){
 									$('#calendarChangeM').datepicker({
 										inline:true,
+                    dateFormat:'yy-mm-dd',
 										showOtherMonths:true,
 										showMonthAfterYear:true,
 										monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
-										dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+										dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                    onClose:function(){
+                      $('.CalendarBox.M').removeClass('datepicker-M');
+                      var date = new Date($('#calendarChangeM').datepicker(
+                        {dateFormat:'yy-mm-dd'}
+                      ).val()),
+                      week = new Array('일', '월', '화', '수', '목', '금', '토');
+                      if(week[date.getDay()]!=undefined){
+                        $('#calendarChangeM').val($('#calendarChangeM').val()+"  "+"("+(week[date.getDay()])+")");
+                      }
+                    }
 									});
                   $('#calendarChangeM').datepicker('setDate', 'today');
+                  $('#calendarChangeM').click(function(){
+                    $('.CalendarBox.M').addClass('datepicker-M');
+                  })
 								});
 								</script>
-                <div class="datepicker-M">
+                <div class="CalendarBox M">
                   <h4>청소일</h4>
-                  <div class="CalendarBox">
-  									<input type="text" name="" value="" id="filCal" class="">
-  									<label for="filCal"></label>
-                    <input type="button" class="mobile closeBarCal">
-  								</div>
-                  <div id="calendarChangeM"></div>
-                </div>
+									<input type="text" name="" value="2019-05-01 (수)" id="calendarChangeM" class="lato">
+									<label for="calendarChangeM"></label>
+                  <input type="button" class="openBarCal">
+								</div>
 							</dt>
               <dd>
                 <ul>
                   <li class="Mfilter">
                     <a href="#none"><strong>상세조건</strong></a>
-                    <div class="addNoneTip blinking">여기서 필터를 풀고 검색을 진행하세요!</div>
                     <div class="MfilterBox">
                       <ol>
                         <li><a href="#none" class="filterTab active" data-rel="filter-1">결제방법</a></li>
@@ -194,7 +224,7 @@
                         <dd><input type="submit" value="적용"></dd>
                       </dl>
                     </div>
-                  </li>
+                  </li><!--.Mfilter-->
                   <li class="Moption">
                     <a href="#none"><strong>평점순</strong></a>
                     <div class="MoptionBox">
@@ -221,6 +251,7 @@
 			</div><!--.companyList-->
       <div class="floatBtn pc">
         <a tel="#none"><span></span></a>
+        <div class="addListTip blinking">견적신청내역 보러가기</div>
       </div><!--.floatBtn-->
       <div class="appBar-bottom mobile">
         <ul>

@@ -80,6 +80,7 @@
                         <li><a href="javascript:void(0)" data-rel="select-02"><span>이사청소</span></a></li>
                         <li><a href="javascript:void(0)" data-rel="select-03"><span>인테리어 후 청소</span></a></li>
                         <li><a href="javascript:void(0)" data-rel="select-04"><span>정기청소</span></a></li>
+                        <li><a href="javascript:void(0)" data-rel="select-05"><span>거주청소</span></a></li>
                       </ol>
                     </dd>
                   </dl>
@@ -87,34 +88,46 @@
                 <li class="cleanerDate">
                   <dl>
                     <dt>청소날짜</dt>
-                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-07-01</a></dd>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar selectStart-1">2019-07-01</a></dd>
                   </dl>
                   <dl>
                     <dt>이사날짜</dt>
-                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-08-01</a></dd>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar selectEnd-1">2019-08-01</a></dd>
                   </dl>
                   <div class="cleanDateModal">
                     <dl>
                       <dt class="cleanStart_dt">
                         <label for="">청소날짜</label>
-                        <input type="text" class="date start lato" placeholder="2019-07-01">
+                        <input type="text" class="date start lato" placeholder="2019-07-01" value="" id="selectStart-1">
                       </dt>
                       <script>
                       $(document).on('ready', function(){
                         $('#calendarStart').datepicker({
+                          dateFormat:'yy-mm-dd',
                           inline:true,
                           showOtherMonths:true,
                           showMonthAfterYear:true,
                           monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
-                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                          onSelect: function(selectedDate){
+                            $('.selectStart-1').html(selectedDate);
+                            $('#selectStart-1').val(selectedDate);
+                          }
                         });
+                        $('#calendarStart').datepicker('setDate', 'today');
                         $('#calendarEnd').datepicker({
+                          dateFormat:'yy-mm-dd',
                           inline:true,
                           showOtherMonths:true,
                           showMonthAfterYear:true,
                           monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
-                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                          onSelect: function(selectedDate){
+                            $('.selectEnd-1').html(selectedDate);
+                            $('#selectEnd-1').val(selectedDate);
+                          }
                         });
+                        $('#calendarEnd').datepicker('setDate', '+1d');
                       })
                       </script>
                       <dd class="cleanStart_dd">
@@ -124,7 +137,7 @@
                     <dl>
                       <dt class="cleanMove_dt">
                         <label for="">이사날짜</label>
-                        <input type="text" class="date end lato" placeholder="2019-08-01">
+                        <input type="text" class="date end lato" placeholder="2019-08-01" value="" id="selectEnd-1">
                       </dt>
                       <dd class="cleanMove_dd">
                         <div id="calendarEnd"></div>
@@ -134,7 +147,7 @@
                   </div>
                 </li>
               </ul>
-              <a href="javascript:void(0)" class="searchCleanerbtn">청소업체 찾기</a>
+              <a href="javascript:void(0)" class="searchCleanerbtn typeY">청소업체 찾기</a>
             </div>
             <div id="searchOneroom">
               <ul>
@@ -149,34 +162,46 @@
                 <li class="cleanerDate">
                   <dl>
                     <dt>청소날짜</dt>
-                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-07-01</a></dd>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar selectStart-2">2019-07-01</a></dd>
                   </dl>
                   <dl>
                     <dt>이사날짜</dt>
-                    <dd><a href="javascript:void(0)" class="lato openCalendar">2019-08-01</a></dd>
+                    <dd><a href="javascript:void(0)" class="lato openCalendar selectEnd-2">2019-08-01</a></dd>
                   </dl>
                   <div class="cleanDateModal">
                     <dl>
                       <dt class="cleanStart_dt">
                         <label for="">청소날짜</label>
-                        <input type="text" class="date start lato" placeholder="2019-07-01" value="">
+                        <input type="text" class="date start lato" placeholder="2019-07-01" value="" id="selectStart-2">
                       </dt>
                       <script>
                       $(document).on('ready', function(){
                         $('#calendarStart2').datepicker({
+                          dateFormat:'yy-mm-dd',
                           inline:true,
                           showOtherMonths:true,
                           showMonthAfterYear:true,
                           monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
-                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                          onSelect: function(selectedDate){
+                            $('.selectStart-2').html(selectedDate);
+                            $('#selectStart-2').val(selectedDate);
+                          }
                         });
+                        $('#calendarStart2').datepicker('setDate', 'today');
                         $('#calendarEnd2').datepicker({
+                          dateFormat:'yy-mm-dd',
                           inline:true,
                           showOtherMonths:true,
                           showMonthAfterYear:true,
                           monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
-                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                          dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                          onSelect: function(selectedDate){
+                            $('.selectEnd-2').html(selectedDate);
+                            $('#selectEnd-2').val(selectedDate);
+                          }
                         });
+                        $('#calendarEnd2').datepicker('setDate', '+1d');
                       })
                       </script>
                       <dd class="cleanStart_dd">
@@ -186,7 +211,7 @@
                     <dl>
                       <dt class="cleanMove_dt">
                         <label for="">이사날짜</label>
-                        <input type="text" class="date end lato" placeholder="2019-08-01">
+                        <input type="text" class="date end lato" placeholder="2019-08-01" value="" id="selectEnd-2">
                       </dt>
                       <dd class="cleanMove_dd">
                         <div id="calendarEnd2"></div>
@@ -196,7 +221,7 @@
                   </div>
                 </li>
               </ul>
-              <a href="javascript:void(0)" class="searchCleanerbtn" id="searchbtn-oneroom">청소업체 찾기</a>
+              <a href="javascript:void(0)" class="searchCleanerbtn typeY" id="searchbtn-oneroom">청소업체 찾기</a>
             </div>
             <div id="searchOriginal" class="firstStep">
               <form action="">
@@ -209,7 +234,7 @@
                   <dd id="phoneNum"><input type="text" placeholder="010-1234-5678" class="lato" id="clientPhone"><input type="button" class="certBTN cert_1 ready" value="인증번호발송"></dd>
                   <dd id="phoneCert"><input type="text" placeholder="1234567" class="lato"><input type="button" class="certBTN cert_2 action" value="인증번호확인"></dd>
                 </dl>
-                <a href="javascript:void(0)" class="searchOriginalbtn">기존 견적 확인</a>
+                <a href="javascript:void(0)" class="searchOriginalbtn typeY">기존 견적 확인</a>
               </form>
             </div>
           </div>
@@ -218,36 +243,36 @@
       <div class="cleanerData">
         <div class="cleanerDataBanner">
           <h3>평수만 입력하면 <span class="textblock mblock">누적데이터를 통해 <span style="color:#fff;">계산된</span> </span><span class="textblock"></span>예상가격을 <span class="mblock"></span>확인할 수 있어요!</h3>
-          <a href="ratecalculate.html" class="moveAlreadyPrice"><span></span></a>
+          <a href="ratecalculate.html" class="moveAlreadyPrice typeY"><span></span></a>
         </div>
         <div class="cleanerDataCircle">
           <div class="inner">
             <ul>
               <li>
-                <div class="circle" data-donutty data-value=100><span class="pic_1"></span></div>
+                <div class="circle typeY" data-donutty data-value=100><span class="pic_1"></span></div>
                 <dl>
-                  <dt><span class="counter lato" data-count="35896">0</span>건</dt>
+                  <dt><span class="counter typeY lato" data-count="35896">0</span>건</dt>
                   <dd>청소 요청 수</dd>
                 </dl>
               </li>
               <li>
-                <div class="circle" data-donutty data-value=100><span class="pic_2"></span></div>
+                <div class="circle typeY" data-donutty data-value=100><span class="pic_2"></span></div>
                 <dl>
-                  <dt><span class="counter lato" data-count="2512">0</span>건</dt>
+                  <dt><span class="counter typeY lato" data-count="2512">0</span>건</dt>
                   <dd>검증된 청소 리뷰</dd>
                 </dl>
               </li>
               <li>
-                <div class="circle" data-donutty data-value=100><span class="pic_3"></span></div>
+                <div class="circle typeY" data-donutty data-value=100><span class="pic_3"></span></div>
                 <dl>
-                  <dt><span class="counter lato" data-count="212">0</span>개</dt>
+                  <dt><span class="counter typeY lato" data-count="212">0</span>개</dt>
                   <dd>신청 가능한 청소 업체</dd>
                 </dl>
               </li>
               <li>
-                <div class="circle" data-donutty data-value=100><span class="pic_4"></span></div>
+                <div class="circle typeY" data-donutty data-value=100><span class="pic_4"></span></div>
                 <dl>
-                  <dt><span class="counter lato" data-count="1985">0</span>세대</dt>
+                  <dt><span class="counter typeY lato" data-count="1985">0</span>세대</dt>
                   <dd>클린벨이 시공한 세대수</dd>
                 </dl>
               </li>
@@ -579,6 +604,10 @@
                       </ol>
                       <span>빌트인 가전 청소는 <span>전문적인 분해 청소가 아닙니다.</span></span>
                     </dd>
+                    <dd>
+                      <h4>요청사항</h4>
+                      <textarea name="name" rows="8" cols="80" placeholder=""></textarea>
+                    </dd>
                   </dl>
                 </div>
                 <div class="step_arrow">
@@ -617,6 +646,525 @@
           <dt><a href="#none" class="modal_close">검색종료</a></dt>
           <dd><a href="#none" class="go_ok">계속검색</a></dd>
         </dl>
+      </div>
+    </div>
+    <div id="modal-main" class="modalpopup">
+      <div class="inner">
+        <div class="modal_intro-main">
+          <a href="javascript:void(0)" class="closeModal W"></a>
+          <h1><img src="../images-v4/logo_modal.png" alt=""></h1>
+          <h3>반갑습니다. 고객님!</h3>
+          <h2>청소업체 추천을 위해<span class="textblock mblock"></span>몇가지 질문에 <span class="mblock"></span>답해주셔야 합니다.</h2>
+          <p>질문은 약 <span class="lato">1</span>분 정도 소요됩니다.</p>
+          <p>총 <span class="lato">5</span>단계, <span class="lato">8</span>가지 질문입니다.</p>
+          <a href="javascript:void(0)" class="modal_close">설문 시작하기</a>
+        </div>
+        <div class="modal_survey-main">
+          <a href="javascript:void(0)" class="closeModal"></a>
+          <div class="surveyBoxes-main">
+            <section id="step1-main">
+              <h3><span>고객님의 기본정보</span>를 입력해주세요.</h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 active" data-rel="step1-main">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2" data-rel="step2-main">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3" data-rel="step3-main">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4" data-rel="step4-main">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_5" data-rel="step5-main">
+                    <a href="javascript:void(0)"><span class="roboto">5</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_6" data-rel="step6-main">
+                    <a href="javascript:void(0)"><span class="roboto">6</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <ul>
+                    <li>
+                      <label for="">예약자명</label>
+                      <input type="text" placeholder="정다운">
+                    </li>
+                  </ul>
+                  <ul>
+                    <li id="phoneNum">
+                      <label for="">휴대전화</label>
+                      <input type="tel" placeholder="010-1234-5678">
+                      <input type="button" class="btn_cert_1 ready" value="인증번호발송">
+                    </li>
+                    <li id="phoneCert">
+                      <input type="text" placeholder="1234567">
+                      <input type="button" class="btn_cert_2" value="인증번호확인">
+                    </li>
+                  </ul>
+                </div>
+                <div class="step_check">
+                  <input type="checkbox" checked id="step1_agree">
+                  <label for="step1_agree"><span></span>클린벨 <strong>이용약관</strong> 및 <strong>개인정보 취급방침</strong>에 대해 동의합니다. (필수)</label>
+                  <input type="checkbox" id="step2_agree">
+                  <label for="step2_agree"><span></span>이사업체도 같이 추천해주세요. (선택)</label>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <section id="step2-main">
+              <h3><span>고객님의 주소</span>를 입력해주세요.</h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1-main">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 active" data-rel="step2-main">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3" data-rel="step3-main">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4" data-rel="step4-main">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_5" data-rel="step5-main">
+                    <a href="javascript:void(0)"><span class="roboto">5</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_6" data-rel="step6-main">
+                    <a href="javascript:void(0)"><span class="roboto">6</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dt>
+                      <label for="postcode-main">우편번호</label>
+                      <input type="text" placeholder="우편번호" id="postcode-main">
+                      <input type="button" onclick="execDaumPostcode()" value="우편번호 검색">
+                    </dt>
+                    <dd>
+                      <label for="">주소</label>
+                      <input type="text" id="address-main" placeholder="주소">
+                      <input type="text" id="detailAddress-main" placeholder="상세주소">
+                      <input type="hidden" id="extraAddress-main" placeholder="참고항목">
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+                <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+                <script>
+                    function execDaumPostcode() {
+                        new daum.Postcode({
+                            oncomplete: function(data) {
+                                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                var addr = ''; // 주소 변수
+                                var extraAddr = ''; // 참고항목 변수
+
+                                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                    addr = data.roadAddress;
+                                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                    addr = data.jibunAddress;
+                                }
+
+                                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                if(data.userSelectedType === 'R'){
+                                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                        extraAddr += data.bname;
+                                    }
+                                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                    }
+                                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                    if(extraAddr !== ''){
+                                        extraAddr = ' (' + extraAddr + ')';
+                                    }
+                                    // 조합된 참고항목을 해당 필드에 넣는다.
+                                    document.getElementById("extraAddress-main").value = extraAddr;
+
+                                } else {
+                                    document.getElementById("extraAddress-main").value = '';
+                                }
+
+                                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                document.getElementById('postcode-main').value = data.zonecode;
+                                document.getElementById("address-main").value = addr;
+                                // 커서를 상세주소 필드로 이동한다.
+                                document.getElementById("detailAddress-main").focus();
+                            }
+                        }).open();
+                    }
+                </script>
+              </form>
+            </section>
+            <section id="step3-main">
+              <h3>견적을 받아보실<br><span>공간의 기본정보</span>를 입력해주세요.</h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1-main">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 on" data-rel="step2-main">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3 active" data-rel="step3-main">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4" data-rel="step4-main">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_5" data-rel="step5-main">
+                    <a href="javascript:void(0)"><span class="roboto">5</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_6" data-rel="step6-main">
+                    <a href="javascript:void(0)"><span class="roboto">6</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dt>
+                      <label for="spaceSize">공간 넓이</label>
+                      <input type="text" placeholder="숫자로 입력하세요." id="spaceSize">
+                      <span>
+                        <input type="button" value="평" id="spaceKor" class="spaceBtn on">
+                        <input type="button" value="m" id="spaceEng" class="spaceBtn"><label for="spaceEng">2</label>
+                      </span>
+                    </dt>
+                    <dd>
+                      <h4>공간 종류</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" id="spaceApt" class="spaceCheck">
+                          <label for="spaceApt">아파트</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceSin" class="spaceCheck">
+                          <label for="spaceSin">단독주택</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceVil" class="spaceCheck">
+                          <label for="spaceVil">빌라/연립</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceOne" class="spaceCheck">
+                          <label for="spaceOne">오피스텔</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceOfc" class="spaceCheck">
+                          <label for="spaceOfc">사무실</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceMal" class="spaceCheck">
+                          <label for="spaceMal">상가</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceFac" class="spaceCheck">
+                          <label for="spaceFac">공장</label>
+                        </li>
+                        <!-- <li>
+                          <input type="checkbox" name="" id="spaceDi" class="spaceCheck">
+                          <label for="spaceDi">직접입력</label>
+                        </li>
+                        <li class="spaceDiInput">
+                          <input type="text" name="" placeholder="공간 종류를 입력하세요.">
+                        </li> -->
+                      </ol>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <section id="step4-main">
+              <h3>견적을 받아보실<br><span>공간의 상세정보</span>를 입력해주세요.</h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1-main">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 on" data-rel="step2-main">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3 on" data-rel="step3-main">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4 active" data-rel="step4-main">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_5" data-rel="step5-main">
+                    <a href="javascript:void(0)"><span class="roboto">5</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_6" data-rel="step6-main">
+                    <a href="javascript:void(0)"><span class="roboto">6</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>공간의 구조</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structNor">
+                          <label for="structNor">일반형</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structFlr">
+                          <label for="structFlr">복층형</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structTer">
+                          <label for="structTer">테라스 있음</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structExp">
+                          <label for="structExp">베란다 확장형</label>
+                        </li>
+                      </ol>
+                    </dd>
+                    <dd>
+                      <h4>공간 개수</h4>
+                      <ul>
+                        <li>
+                          <label for="btnRoom">방</label>
+                          <div class="numberBox">
+                            <button type="button" name="button" class="spaceMinus" data-quantity="minus" data-field="btnRoom"><span></span></button>
+                            <input type="text" name="btnRoom" id="btnRoom" value="1" class="lato">
+                            <button type="button" name="button" class="spacePlus" data-quantity="plus" data-field="btnRoom"><span></span></button>
+                          </div>
+                        </li>
+                        <li>
+                          <label for="btnToilet">화장실</label>
+                          <div class="numberBox">
+                            <button type="button" name="button" class="spaceMinus" data-quantity="minus" data-field="btnToilet"><span></span></button>
+                            <input type="text" name="btnToilet" id="btnToilet" value="1" class="lato">
+                            <button type="button" name="button" class="spacePlus" data-quantity="plus" data-field="btnToilet"><span></span></button>
+                          </div>
+                        </li>
+                        <li>
+                          <label for="btnVeranda">베란다</label>
+                          <div class="numberBox">
+                            <button type="button" name="button" class="spaceMinus" data-quantity="minus" data-field="btnVeranda"><span></span></button>
+                            <input type="text" name="btnVeranda" id="btnVeranda" value="0" class="lato">
+                            <button type="button" name="button" class="spacePlus" data-quantity="plus" data-field="btnVeranda"><span></span></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <section id="step5-main">
+              <h3><span>청소업체의 원하시는 조건</span>을<br>선택해주세요. <small>중복선택가능</small></h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1-main">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 on" data-rel="step2-main">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3 on" data-rel="step3-main">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4 on" data-rel="step4-main">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_5 active" data-rel="step5-main">
+                    <a href="javascript:void(0)"><span class="roboto">5</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_6" data-rel="step6-main">
+                    <a href="javascript:void(0)"><span class="roboto">6</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>품질</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" value="" id="quality01">
+                          <label for="quality01">사업자 등록업체</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="quality02">
+                          <label for="quality02">친환경 세제사용</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="quality03">
+                          <label for="quality03">스팀장비 사용</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="quality04" class="qualityAdd">
+                          <label for="quality04">하루 한집 청소</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="quality05" class="qualityAdd">
+                          <label for="quality05">내국인팀</label>
+                        </li>
+                      </ol>
+                      <span class="addOption">가격이 약 <span class="lato">5%</span> 상승할 수 있습니다.</span>
+                    </dd>
+                    <dd class="howpay">
+                      <h4>결제방법</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" value="" id="howpayCash">
+                          <label for="howpayCash">현금 결제</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="howpayCard" class="notCash">
+                          <label for="howpayCard">카드 결제</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="howpayBill" class="notCash">
+                          <label for="howpayBill">현금영수증</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="howpayTax" class="notCash">
+                          <label for="howpayTax">세금계산서</label>
+                        </li>
+                      </ol>
+                      <span class="addTax">가격이 약 <span class="lato">5%</span> 상승할 수 있습니다.</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <section id="step6-main">
+              <h3><span>추가로 원하시는 서비스나 요청사항</span>을<br>알려주세요. <small>추가요금발생</small></h3>
+              <div class="surveyTab">
+                <ul>
+                  <li class="modal_tablink mtab_1 on" data-rel="step1-main">
+                    <a href="javascript:void(0)"><span class="roboto">1</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_2 on" data-rel="step2-main">
+                    <a href="javascript:void(0)"><span class="roboto">2</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_3 on" data-rel="step3-main">
+                    <a href="javascript:void(0)"><span class="roboto">3</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_4 on" data-rel="step4-main">
+                    <a href="javascript:void(0)"><span class="roboto">4</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_5 on" data-rel="step5-main">
+                    <a href="javascript:void(0)"><span class="roboto">5</span></a>
+                  </li>
+                  <li class="modal_tablink mtab_6 active" data-rel="step6-main">
+                    <a href="javascript:void(0)"><span class="roboto">6</span></a>
+                  </li>
+                </ul>
+              </div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>부가서비스</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" value="" id="addService01">
+                          <label for="addService01">
+                            <h5>새집증후군</h5>
+                            <span>피톤치드를 집안전체에 분사하여 살균하는 작업</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="addService02">
+                          <label for="addService02">
+                            <h5>줄눈시공</h5>
+                            <span>타일 사이사이 곰팡이 방지를 위한 시공</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="addService03">
+                          <label for="addService03">
+                            <h5>마루광택</h5>
+                            <span>마루 기스보호와 광택을 위한 시공</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="addService04">
+                          <label for="addService04">
+                            <h5>스티커, 시트지제거</h5>
+                            <span>현관, 신발장, 유리창, 콘센트의 스티커 제거</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="addService05">
+                          <label for="addService05">
+                            <h5>베란다 곰팡이제거</h5>
+                            <span>벽지곰팡이는 제거하기 어렵습니다.</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" id="addService06">
+                          <label for="addService06">
+                            <h5>페인트 흔적제거</h5>
+                            <span>창틀, 바닥, 몰딩 등에 있는 페인트 제거</span>
+                          </label>
+                        </li>
+                      </ol>
+                    </dd>
+                    <dd>
+                      <h4>요청사항</h4>
+                      <textarea name="name" rows="8" cols="80" placeholder=""></textarea>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="selectCompany.html" class="nextStep" style="display:block;padding-right:0;"><span>조건에 맞는 업체 확인하기</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   </div><!--#wrap-->
