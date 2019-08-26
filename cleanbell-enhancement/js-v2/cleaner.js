@@ -140,21 +140,21 @@ $(function () {
     $('#' + $(this).data('rel')).show();
   });
   //메인 휴대폰 인증
-  $('.cert_1').click(function(){
-    $('#searchOriginal').removeClass('firstStep');
-    $('.cert_1').removeClass('ready')
-    $('#phoneCert').show();
-  });
+  // $('.cert_1').click(function(){
+  //   $('#searchOriginal').removeClass('firstStep');
+  //   $('.cert_1').removeClass('ready')
+  //   $('#phoneCert').show();
+  // });
   //서브페이지 모달-휴대폰 인증
-  $('.btn_cert_1').click(function(){
+  $('#btn-cert-1').click(function(){
     $('#phoneCert').show();
-    $('.btn_cert_1').css('background','#322d4f').css('color','#fff');
+    $('#btn-cert-1').css('background','#322d4f').css('color','#fff');
   });
-  $('.btn_cert_2').click(function(){
-    $('.btn_cert_1').css('background','#e4e4e4').css('color','#b5b5b5').prop('disabled', true);
-    $('.btn_cert_2').addClass('action');
-    $('.step_check').show();
-    $('.nextStep').show().css('display','block');
+  $('#btn-cert-2').click(function(){
+    $('#btn-cert-1').css('background','#e4e4e4').css('color','#b5b5b5').prop('disabled', true);
+    $('#btn-cert-2').addClass('action');
+    $('#modal-main #step1-main .step_check').show();
+    $('#modal-main #step1-main .nextStep').show().css('display','block');
   });
   //서브페이지 모달-공간의 기본정보 공간 넓이 탭
   $('.spaceBtn').click(function(){
@@ -513,5 +513,25 @@ $(function () {
     $('#modal-main').hide();
     $('.modal_intro-main').show();
     $('.modal_survey-main').hide();
+  });
+
+  //190807 추가
+  //기존견적확인 인증번호발송
+  $('#searchOriginal .cert_1').click(function(){
+    $('#searchOriginal').removeClass('firstStep');
+    $('.cert_1').removeClass('ready')
+    $('#phoneCert-original').show();
+  });
+
+  //원룸청소업체검색 모달인증번호
+  $('#oneroom-btn-cert-1').click(function(){
+    $('#phoneCert').show();
+    $('#oneroom-btn-cert-1').css('background','#322d4f').css('color','#fff');
+  });
+  $('#oneroom-btn-cert-2').click(function(){
+    $('#oneroom-btn-cert-1').css('background','#e4e4e4').css('color','#b5b5b5').prop('disabled', true);
+    $('#oneroom-btn-cert-2').addClass('action');
+    $('.step_check').show();
+    $('#modal-oneroom #step1 .nextStep').show().css('display','block');
   });
 });

@@ -231,8 +231,8 @@
                 </dl>
                 <dl>
                   <dt><label for="clientPhone">휴대전화</label></dt>
-                  <dd id="phoneNum"><input type="text" placeholder="010-1234-5678" class="lato" id="clientPhone"><input type="button" class="certBTN cert_1 ready" value="인증번호발송"></dd>
-                  <dd id="phoneCert"><input type="text" placeholder="1234567" class="lato"><input type="button" class="certBTN cert_2 action" value="인증번호확인"></dd>
+                  <dd id="phoneNum-original"><input type="text" placeholder="010-1234-5678" class="lato" id="clientPhone"><input type="button" class="certBTN cert_1 ready" value="인증번호발송"></dd>
+                  <dd id="phoneCert-original"><input type="text" placeholder="1234567" class="lato"><input type="button" class="certBTN cert_2 action" value="인증번호확인"></dd>
                 </dl>
                 <a href="javascript:void(0)" class="searchOriginalbtn typeY">기존 견적 확인</a>
               </form>
@@ -384,14 +384,14 @@
                     </li>
                   </ul>
                   <ul>
-                    <li id="phoneNum">
+                    <li id="phoneNum-oneroom">
                       <label for="">휴대전화</label>
                       <input type="tel" placeholder="010-1234-5678">
                       <input type="button" class="btn_cert_1 ready" value="인증번호발송" id="oneroom-btn-cert-1">
                     </li>
-                    <li id="phoneCert" class="oneroom-cert">
+                    <li id="phoneCert-oneroom" class="oneroom-cert">
                       <input type="text" placeholder="1234567">
-                      <input type="button" class="btn_cert_2" value="인증번호확인">
+                      <input type="button" class="btn_cert_2" value="인증번호확인" id="oneroom-btn-cert-2">
                     </li>
                   </ul>
                 </div>
@@ -698,11 +698,11 @@
                     <li id="phoneNum">
                       <label for="">휴대전화</label>
                       <input type="tel" placeholder="010-1234-5678">
-                      <input type="button" class="btn_cert_1 ready" value="인증번호발송">
+                      <input type="button" class="btn_cert_1 ready" value="인증번호발송" id="btn-cert-1">
                     </li>
                     <li id="phoneCert">
                       <input type="text" placeholder="1234567">
-                      <input type="button" class="btn_cert_2" value="인증번호확인">
+                      <input type="button" class="btn_cert_2" value="인증번호확인" id="btn-cert-2">
                     </li>
                   </ul>
                 </div>
@@ -870,7 +870,7 @@
                         </li>
                         <li>
                           <input type="checkbox" name="" id="spaceOne" class="spaceCheck">
-                          <label for="spaceOne">오피스텔</label>
+                          <label for="spaceOne">원룸</label>
                         </li>
                         <li>
                           <input type="checkbox" name="" id="spaceOfc" class="spaceCheck">
@@ -884,13 +884,13 @@
                           <input type="checkbox" name="" id="spaceFac" class="spaceCheck">
                           <label for="spaceFac">공장</label>
                         </li>
-                        <!-- <li>
+                        <li>
                           <input type="checkbox" name="" id="spaceDi" class="spaceCheck">
                           <label for="spaceDi">직접입력</label>
                         </li>
                         <li class="spaceDiInput">
                           <input type="text" name="" placeholder="공간 종류를 입력하세요.">
-                        </li> -->
+                        </li>
                       </ol>
                     </dd>
                   </dl>

@@ -1278,3 +1278,8 @@ transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:t
 #step6-main .inputbox dl dd ol li input[type=checkbox]:checked + label::before{background:url(../images-v4/addService_checked.png) no-repeat;}
 #step6-main .inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
 .inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
+
+/* 190807 */
+#phoneCert-original{display:none;}
+#phoneCert-modal{display:none;}
+#phoneCert-oneroom{display:none;}
